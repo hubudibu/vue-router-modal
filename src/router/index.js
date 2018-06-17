@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/components/Layout'
+import Modal from '@/components/Modal'
 import One from '@/components/One'
 import Two from '@/components/Two'
-import MOne from '@/components/MOne'
+import Three from '@/components/Three'
 
 Vue.use(Router)
 
@@ -25,12 +26,19 @@ export default new Router({
           component: Two
         },
         {
-          path: 'modal/m-one',
-          name: 'MOne',
+          path: 'modal',
+          name: 'Modal',
           components: {
             default: Two,
-            modal: MOne
-          }
+            modal: Modal
+          },
+          children: [
+            {
+              path: 'modal-one',
+              name: 'Three',
+              component: Three
+            }
+          ]
         }
       ]
     }
