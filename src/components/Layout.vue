@@ -19,11 +19,10 @@ export default {
 .modal {
   border: 4px solid;
   background: white;
-  /* I'd rather see what's under
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 0 1000px rgba(0,0,0,.5);
 }
 .modal:empty {

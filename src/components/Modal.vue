@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="modal">
     <h1>This is a modal</h1>
-    <button @click="handleClose">close</button>
+    <button class="close" @click="handleClose">close</button>
     <router-view></router-view>
   </div>
 </template>
@@ -16,3 +16,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .modal {
+    padding: 2em;
+  }
+  .close {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+  }
+</style>
